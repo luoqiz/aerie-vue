@@ -1,0 +1,6 @@
+packages:
+  - play # 存放组件的测试代码
+  - docs # 存放文档
+  - "packages/**" # 存放所有工具、组件
+  - "project/**" # 存放项目'
+  - "modular/**" # 存放所有模块
