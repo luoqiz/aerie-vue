@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { Text, Button } from '@aerie-module/base'
+import { Image } from '@aerie-module/system'
+import { useUserStore } from '@aerie-module/base'
+
+const userStore = useUserStore()
+const changeName = () => {
+  userStore.setUser('New Name')
+}
 </script>
 
 <template>
@@ -9,9 +17,17 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-
+      <Text> 123</Text>
+      {{ userStore.user }}
+      <Button @click="changeName"></Button>
+      <div style="width:200px; height:150px">
+        <!-- <Image></Image> -->
+      </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/system/dict">Dict</RouterLink>
+        <RouterLink to="/system/file">file</RouterLink>
+        <RouterLink to="/login">login</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>

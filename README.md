@@ -3,6 +3,7 @@
 # --filter 或者 -F <package_name> 可以在指定目录 package 执行任务
 
 pnpm -F example add sass # 在根目录中向 example 目录安装 sass
+pnpm add example --workspace #向项目里添加 当前项目中的example
 ···
 
 Git 提交规范
